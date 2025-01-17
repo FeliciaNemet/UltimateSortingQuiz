@@ -4,6 +4,9 @@ import QuizQuestion from './components/QuizQuestion';
 import ResultPage from './components/ResultPage';
 import './App.css';
 
+// Import background image
+import quizBackground from './assets/images/backgrounds/paper.jpg';
+
 function App() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [houseScores, setHouseScores] = useState({
@@ -53,12 +56,22 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <h1>Hogwarts House Sorting Quiz</h1>
-            <QuizQuestion 
-                question={questions[currentQuestion]} 
-                onAnswer={handleAnswer}
-            />
+        <div 
+            className="App" 
+            style={{ 
+                backgroundImage: `url(${quizBackground})` 
+            }}
+        >
+            <div className="quiz-container">
+                <h1>Hogwarts House Sorting Quiz</h1>
+                <QuizQuestion 
+                    question={questions[currentQuestion]} 
+                    onAnswer={handleAnswer}
+                />
+                <div className="quiz-progress">
+                    Question {currentQuestion + 1} of {questions.length}
+                </div>
+            </div>
         </div>
     );
 }
