@@ -1,0 +1,28 @@
+.quiz-question {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-option {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    width: 250px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.image-option:hover {
+    transform: scale(1.05);
+}
+
+.image-option.selected {
+    border-color: #4CAF50;
+}
