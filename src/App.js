@@ -3,7 +3,6 @@ import { questions } from './data/questions';
 import QuizQuestion from './components/QuizQuestion';
 import ResultPage from './components/ResultPage';
 import './App.css';
-import { Navigate } from 'react-router-dom';
 
 // Import background image
 import quizBackground from './assets/images/backgrounds/paper.jpg';
