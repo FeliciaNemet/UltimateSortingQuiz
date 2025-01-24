@@ -1,5 +1,6 @@
 .quiz-question {
     text-align: center;
+    font-family: fantasy;
 }
 
 .options {
@@ -13,7 +14,7 @@
 .image-option {
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 3px solid transparent;
+    border: 3px solid black;
     border-radius: 10px;
     width: 250px;
     height: 360px;
@@ -35,4 +36,5 @@
     margin-top: 20px;
     font-size: 0.9em;
     color: #666;
+    font-family: fantasy;
 }

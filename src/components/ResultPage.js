@@ -16,6 +16,7 @@ import slytherinBackground from '../assets/images/backgrounds/slytherin-bg.jpg';
 const houseDetails = {
     "Gryffindor": {
         name: "Gryffindor",
+        quote: `"You might belong in Gryffindor, Where dwell the brave at heart, Their daring, nerve and chivalry Set Gryffindors apart." -Sorting Hat`,
         crest: gryffindorCrest,
         background: gryffindorBackground,
         colors: {
@@ -43,6 +44,7 @@ const houseDetails = {
     },
     "Ravenclaw": {
         name: "Ravenclaw",
+        quote: `"Or yet in wise old Ravenclaw, If you've a ready mind, \nWhere those of wit and learning, \nWill always find their kind." -Sorting Hat`,
         crest: ravenclawCrest,
         background: ravenclawBackground,
         colors: {
@@ -70,6 +72,7 @@ const houseDetails = {
     },
     "Hufflepuff": {
         name: "Hufflepuff",
+        quote: `"You might belong in Hufflepuff. Where they are just and loyal. Those patient Hufflepuffs are true. And unafraid of toil." -Sorting Hat`,
         crest: hufflepuffCrest,
         background: hufflepuffBackground,
         colors: {
@@ -97,6 +100,7 @@ const houseDetails = {
     },
     "Slytherin": {
         name: "Slytherin",
+        quote: `"Or perhaps in Slytherin, You'll make your real friends,Those cunning folk use any means,To achieve their ends." -Sorting Hat`,
         crest: slytherinCrest,
         background: slytherinBackground,
         colors: {
@@ -138,6 +142,7 @@ const ResultPage = ({ house, onRestart }) => {
         >
             <div className="result-content">
                 <h1>You Belong in {house}!</h1>
+                <h3>{houseInfo.quote}</h3>
                 
                 <div className="result-grid">
                     <div className="crest-section">
@@ -155,7 +160,7 @@ const ResultPage = ({ house, onRestart }) => {
                         </div>
 
                         <div className="house-traits">
-                            <h3>Key Traits</h3>
+                            <h4>Key Traits</h4>
                             <ul>
                                 {houseInfo.traits.map((trait, index) => (
                                     <li key={index}>{trait}</li>
@@ -164,12 +169,12 @@ const ResultPage = ({ house, onRestart }) => {
                         </div>
 
                         <div className="house-motto">
-                            <h3>House Motto</h3>
+                            <h4>House Motto</h4>
                             <p>"{houseInfo.motto}"</p>
                         </div>
 
                         <div className="famous-members">
-                            <h3>Famous Members</h3>
+                            <h4>Famous Members</h4>
                             <ul>
                                 {houseInfo.famousMembers.map((member, index) => (
                                     <li key={index}>{member}</li>
@@ -178,7 +183,7 @@ const ResultPage = ({ house, onRestart }) => {
                         </div>
 
                         <div className="common-room">
-                            <h3>Common Room</h3>
+                            <h4>Common Room</h4>
                             <p><strong>Location:</strong> {houseInfo.commonRoom.location}</p>
                             <p>{houseInfo.commonRoom.description}</p>
                         </div>
@@ -194,6 +199,9 @@ const ResultPage = ({ house, onRestart }) => {
                 >
                     Retake Quiz
                 </button>
+                <div className='footer'>
+                    <h4>Developed with ♥ by Felicia Nemet</h4>
+                </div>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import { questions } from './data/questions';
 import QuizQuestion from './components/QuizQuestion';
 import ResultPage from './components/ResultPage';
 import './App.css';
+import { Navigate } from 'react-router-dom';
 
 // Import background image
 import quizBackground from './assets/images/backgrounds/paper.jpg';
@@ -63,13 +64,16 @@ function App() {
             }}
         >
             <div className="quiz-container">
-                <h1>Hogwarts House Sorting Quiz</h1>
+                <h1>The Ultimate Hogwarts House Sorting Quiz</h1>
                 <QuizQuestion 
                     question={questions[currentQuestion]} 
                     onAnswer={handleAnswer}
                 />
                 <div className="quiz-progress">
                     Question {currentQuestion + 1} of {questions.length}
+                </div>
+                <div className='footer'>
+                    <h4>Developed with ♥ by Felicia Nemet</h4>
                 </div>
             </div>
         </div>
